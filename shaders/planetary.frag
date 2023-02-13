@@ -8,9 +8,9 @@ vec2 u_resolution = vec2(343.0,343.0);
 #define PI 3.14159265359
 
 vec3 circle(vec2 center, float radius, vec2 normalizedPoint) {
-    float pct = distance(normalizedPoint, vec2(center));
+    float dist = distance(normalizedPoint, center);
     
-	vec3 color = step(radius, vec3(pct));
+	vec3 color = step(radius, vec3(dist));
 
     return abs(color - 1.0);
 }
